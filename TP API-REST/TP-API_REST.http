@@ -1,0 +1,64 @@
+@TP_API_REST_HostAddress = http://localhost:5257
+
+GET {{TP_API_REST_HostAddress}}/Mascota/
+Accept: application/json
+
+###
+
+GET {{TP_API_REST_HostAddress}}/Mascota/1
+Accept: application/json
+
+###
+
+POST {{TP_API_REST_HostAddress}}/Mascota/perro
+Content-Type: application/json
+
+{
+  "nombre": "Toby",
+  "edad": 2,
+  "raza": "Beagle"
+}
+
+###
+
+POST {{TP_API_REST_HostAddress}}/Mascota/gato
+Content-Type: application/json
+
+{
+  "nombre": "Pelusa",
+  "edad": 7,
+  "color": "Gris"
+}
+
+###
+
+PUT {{TP_API_REST_HostAddress}}/Mascota/1
+Content-Type: application/json
+
+{
+  "tipo": "perro",
+  "nombre": "Firulais",
+  "edad": 6,
+  "raza": "Golden Retriever"
+}
+
+###
+
+DELETE {{TP_API_REST_HostAddress}}/Mascota/3
+
+###
+
+GET {{TP_API_REST_HostAddress}}/Mascota/mayores-a/5
+Accept: application/json
+
+###
+
+GET {{TP_API_REST_HostAddress}}/Mascota/tipo/perro
+Accept: application/json
+
+###
+
+GET {{TP_API_REST_HostAddress}}/Mascota/tipo/gato
+Accept: application/json
+
+###
